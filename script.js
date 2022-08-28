@@ -11,8 +11,8 @@ async function hentData() {
   vis(json);
 }
 
-const main = document.querySelector("main");
-const temp = document.querySelector("template").content;
+const section = document.querySelector("section");
+const template = document.querySelector("template").content;
 
 function vis(json) {
   json.forEach((ret) => {
@@ -21,7 +21,7 @@ function vis(json) {
     klon.querySelector(".ret").textContent = ret.navn;
     klon.querySelector(".info").textContent = ret.titel;
     klon.querySelector(".pris").textContent = ret.pris + "kr.";
-    main.appendChild(klon);
+    section.appendChild(klon);
   });
 }
 
