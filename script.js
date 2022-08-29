@@ -1,5 +1,5 @@
 const url = "https://babushka-dd8a.restdb.io/rest/menu";
-const header = document.querySelector("h1");
+const header = document.querySelector("h2");
 const apikey = {
   headers: {
     "x-apikey": "600ec2fb1346a1524ff12de4",
@@ -35,7 +35,7 @@ function vis() {
     console.log("Forretter", ret.forretter);
     if (filter == ret.forretter || filter == "alle") {
       const klon = temp.cloneNode(true);
-      klon.querySelector(".billede").src = "medium/" + ret.billede;
+      klon.querySelector(".billedeurl").src = "medium/" + ret.billede;
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".info").textContent = ret.titel;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";
