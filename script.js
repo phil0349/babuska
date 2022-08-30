@@ -32,10 +32,10 @@ function vis() {
   const temp = document.querySelector("template").content;
   section.textContent = "";
   data.forEach((ret) => {
-    console.log("Forretter", ret.forretter);
+    console.log("forretter", ret.forretter);
     if (filter == ret.forretter || filter == "alle") {
       const klon = temp.cloneNode(true);
-      klon.querySelector(".billedeurl").src = "retter/" + ret.billede;
+      klon.querySelector(".billedeurl").src = "retter/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".info").textContent = ret.titel;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";

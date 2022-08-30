@@ -5,6 +5,8 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 100px;
+  border: 3px solid rgb(52, 49, 47);
+  border-radius: 0.5em;
 }
 
 nav {
@@ -17,11 +19,12 @@ button {
   padding: 10px;
   border-radius: 20%;
   border-width: 5px;
+  background-color: rgb(233, 174, 25);
 }
 
 .valgt {
   color: white;
-  background-color: red;
+  background-color: rgb(52, 49, 47);
 }
 
 section {
@@ -32,8 +35,9 @@ section {
 }
 article {
   padding: 1em;
-  border: 1px solid rgb(188, 138, 45);
+  border: 3px solid rgb(52, 49, 47);
   border-radius: 0.5em;
+  background-color: rgb(233, 174, 25);
 }
 
 img {
