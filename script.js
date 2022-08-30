@@ -35,7 +35,7 @@ function vis() {
     console.log("Forretter", ret.forretter);
     if (filter == ret.forretter || filter == "alle") {
       const klon = temp.cloneNode(true);
-      klon.querySelector(".billedeurl").src = "medium/" + ret.billede;
+      klon.querySelector(".billedeurl").src = "retter/" + ret.billede;
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".info").textContent = ret.titel;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";
