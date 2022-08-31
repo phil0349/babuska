@@ -13,6 +13,7 @@ h2 {
   font-size: 1rem;
   display: flex;
   justify-content: center;
+  color: lightyellow;
 }
 h3 {
   font-family: "loveya", cursive;
