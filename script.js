@@ -32,7 +32,7 @@ function vis() {
   const temp = document.querySelector("template").content;
   main.textContent = "";
   data.forEach((ret) => {
-    console.log("Forretter", ret.forretter);
+    console.log("forret", ret.forret);
     if (filter == ret.forretter || filter == "alle") {
       const klon = temp.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visRet(ret));

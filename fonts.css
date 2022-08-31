@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "bungee";
+  src: url(fonts/Bungee_Shade/BungeeShade-Regular.ttf) format("woff2");
+} /* font-family: 'bungee', cursive */
+@font-face {
+  font-family: "londrina";
+  src: url(fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf) format("woff2");
+} /* font-family: 'londrina', cursive */
+@font-face {
+  font-family: "loveya";
+  src: url(fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf) format("woff2");
+} /* font-family: 'loveya', cursive */
+@font-face {
+  font-family: "luckiest";
+  src: url(fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf) format("woff2");
+} /* font-family: 'luckiest', cursive */
