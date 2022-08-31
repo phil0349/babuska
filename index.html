@@ -14,18 +14,30 @@
       <button data-troende="hovedretter">Hovedretter</button>
       <button data-troende="desserter">Desserter</button>
     </nav>
+
     <h2></h2>
-    <section>
-      <template>
-        <article>
-          <img src="" alt="" class="billede" />
-          <img src="" alt="" class="billedeurl" />
-          <h3 class="ret"></h3>
-          <p class="info"></p>
-          <p class="pris"></p>
-        </article>
-      </template>
-    </section>
+    <main></main>
+
+    <template>
+      <article>
+        <img src="" alt="" class="billede" />
+        <img src="" alt="" class="billedeurl" />
+        <h3 class="ret"></h3>
+        <p class="info"></p>
+        <p class="pris"></p>
+      </article>
+    </template>
+
+    <div id="popup">
+      <div id="luk">CLOSE X</div>
+      <article>
+        <h2>RET: <span class="ret"></span></h2>
+        <img src="" alt="" />
+        <h3>Pris: <span class="pris"></span></h3>
+        <p>Beskrivelse: <span class="beskrivelse"></span></p>
+      </article>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

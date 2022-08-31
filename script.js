@@ -1,6 +1,6 @@
 const url = "https://babushka-dd8a.restdb.io/rest/menu";
 const header = document.querySelector("h2");
-const apikey = {
+const mereinfo = {
   headers: {
     "x-apikey": "600ec2fb1346a1524ff12de4",
   },
@@ -22,52 +22,41 @@ function filtrerRetter() {
 }
 
 async function hentData() {
-  const response = await fetch(url, apikey);
+  const response = await fetch(url, mereinfo);
   data = await response.json();
   vis(data);
 }
 
 function vis() {
-  const section = document.querySelector("section");
+  const main = document.querySelector("main");
   const temp = document.querySelector("template").content;
-  section.textContent = "";
+  main.textContent = "";
   data.forEach((ret) => {
-    console.log("forretter", ret.forretter);
+    console.log("Forretter", ret.forretter);
     if (filter == ret.forretter || filter == "alle") {
       const klon = temp.cloneNode(true);
+      klon.querySelector("article").addEventListener("click", () => visRet(ret));
       klon.querySelector(".billedeurl").src = "retter/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".ret").textContent = ret.navn;
       klon.querySelector(".info").textContent = ret.titel;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";
-      section.appendChild(klon);
+      main.appendChild(klon);
     }
   });
 }
 
-hentData();
+document.querySelector("#luk").addEventListener("click", () => (popup.style.display = "none"));
 
-/*
-
-async function hentData() {
-  const response = await fetch(url, apiKey);
-  const json = await response.json();
-  vis(json);
-}
-
-const section = document.querySelector("section");
-const temp = document.querySelector("template").content;
-
-function vis(json) {
-  json.forEach((ret) => {
-    const klon = temp.cloneNode(true);
-    klon.querySelector(".billede").src = "medium/" + ret.billede;
-    klon.querySelector(".ret").textContent = ret.navn;
-    klon.querySelector(".info").textContent = ret.titel;
-    klon.querySelector(".pris").textContent = ret.pris + "kr.";
-    section.appendChild(klon);
-  });
+function visRet(retData) {
+  console.log(retData);
+  const popup = document.querySelector("#popup");
+  popup.style.display = "flex";
+  popup.querySelector("h2").textContent = retData.navn;
+  popup.querySelector("p").textContent = retData.titel;
+  popup.querySelector("img").src = "faces/" + retData.billede;
+  popup.querySelector("h3").textContent = retData.pris + "kr.";
+  popup.addEventListener("click", () => (popup.style.display = "none"));
+  main.appendChild(popup);
 }
 
 hentData();
-
-*/
