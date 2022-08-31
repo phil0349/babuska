@@ -2,11 +2,11 @@ h1 {
   font-size: 7rem;
   font-family: "bungee", cusrsive;
   background-color: lightyellow;
-  color: rgb(52, 49, 47);
+  color: rgb(6, 19, 45);
   display: flex;
   justify-content: center;
   padding: 1rem;
-  border: 2px solid rgb(52, 49, 47);
+  border: 2px solid rgb(6, 19, 45);
 }
 h2 {
   font-family: "loveya", cursive;
@@ -24,11 +24,32 @@ p {
   font-size: 2.4rem;
   font-weight: bold;
   margin: 0;
-  color: rgb(52, 49, 47);
+  color: rgb(6, 19, 45);
 }
 .popuptekst {
   font-family: "luckiest", cursive;
   font-size: 1.4rem;
+}
+.kategori,
+.kortBeskrivelse,
+.langBeskrivelse,
+.oprindelsesregion {
+  font-family: "loveya", cursive;
+  font-size: 1rem;
+}
+.kategori {
+  color: coral;
+}
+div {
+  max-width: fit-content;
+}
+
+.splash {
+  margin-bottom: 20px;
+  width: fit-content;
+  background-size: cover;
+  margin-top: -53px;
+  border-radius: 0;
 }
 
 body {
@@ -50,12 +71,12 @@ button {
   border-radius: 20%;
   border-width: 2px;
   background-color: lightyellow;
-  border-color: rgb(52, 49, 47);
+  border-color: rgb(6, 19, 45);
 }
 
 .valgt {
   color: white;
-  background-color: rgb(52, 49, 47);
+  background-color: rgb(6, 19, 45);
 }
 
 main {
@@ -66,7 +87,7 @@ main {
 }
 article {
   padding: 2em;
-  border: 2px solid rgb(52, 49, 47);
+  border: 2px solid rgb(6, 19, 45);
   border-radius: -0.5em;
   background-color: lightyellow;
 }
@@ -76,7 +97,7 @@ img {
   border: solid;
   border-radius: 0.5em;
   border-width: 2px;
-  border-color: rgb(52, 49, 47);
+  border-color: rgb(6, 19, 45);
 }
 
 #popup {
@@ -106,7 +127,7 @@ img {
   border-radius: 20%;
   border: solid;
   border-width: 2px;
-  border-color: rgb(52, 49, 47);
+  border-color: rgb(6, 19, 45);
   color: white;
   background-color: red;
   position: absolute;

@@ -27,7 +27,7 @@ async function hentData() {
   vis(data);
 }
 
-function vis(data) {
+function vis() {
   const main = document.querySelector("main");
   const temp = document.querySelector("template").content;
   main.textContent = "";
@@ -39,9 +39,7 @@ function vis(data) {
       klon.querySelector(".billedeurl").src = "retter/" + ret.billednavn + "-md.jpg";
       klon.querySelector(".kategori").textContent = ret.kategori;
       klon.querySelector(".kortBeskrivelse").textContent = ret.kortbeskrivelse;
-      klon.querySelector(".langBeskrivelse").textContent = ret.langbeskrivelse;
       klon.querySelector(".navn").textContent = ret.navn;
-      klon.querySelector(".opreindelsesregion").textContent = ret.oprindelsesregion;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";
       main.appendChild(klon);
     }
