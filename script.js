@@ -27,18 +27,21 @@ async function hentData() {
   vis(data);
 }
 
-function vis() {
+function vis(data) {
   const main = document.querySelector("main");
   const temp = document.querySelector("template").content;
   main.textContent = "";
   data.forEach((ret) => {
-    console.log("forret", ret.forret);
-    if (filter == ret.forretter || filter == "alle") {
+    //console.log("kategori", ret.kategori);
+    if (filter == ret.kategori || filter == "alle") {
       const klon = temp.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visRet(ret));
       klon.querySelector(".billedeurl").src = "retter/" + ret.billednavn + "-md.jpg";
-      klon.querySelector(".ret").textContent = ret.navn;
-      klon.querySelector(".info").textContent = ret.titel;
+      klon.querySelector(".kategori").textContent = ret.kategori;
+      klon.querySelector(".kortBeskrivelse").textContent = ret.kortbeskrivelse;
+      klon.querySelector(".langBeskrivelse").textContent = ret.langbeskrivelse;
+      klon.querySelector(".navn").textContent = ret.navn;
+      klon.querySelector(".opreindelsesregion").textContent = ret.oprindelsesregion;
       klon.querySelector(".pris").textContent = ret.pris + "kr.";
       main.appendChild(klon);
     }
@@ -52,8 +55,9 @@ function visRet(retData) {
   const popup = document.querySelector("#popup");
   popup.style.display = "flex";
   popup.querySelector("h2").textContent = retData.navn;
-  popup.querySelector("p").textContent = retData.titel;
-  popup.querySelector("img").src = "faces/" + retData.billede;
+  popup.querySelector("p").textContent = retData.langbeskrivelse;
+  popup.querySelector("p+p").textContent = retData.oprindelsesregion;
+  popup.querySelector("img").src = "faces/" + retData.billedenavn + "-md.jpg";
   popup.querySelector("h3").textContent = retData.pris + "kr.";
   popup.addEventListener("click", () => (popup.style.display = "none"));
   main.appendChild(popup);
