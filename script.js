@@ -14,7 +14,7 @@ filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerRetter));
 hentData();
 
 function filtrerRetter() {
-  filter = this.dataset.forretter;
+  filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   vis(data);
@@ -24,6 +24,7 @@ function filtrerRetter() {
 async function hentData() {
   const response = await fetch(url, mereinfo);
   data = await response.json();
+  console.log(data);
   vis(data);
 }
 
