@@ -82,11 +82,13 @@
     grid-gap: 1em;
     justify-content: center;
   }
+
   article {
     padding: 1em;
     border: 2px solid rgb(6, 19, 45);
     border-radius: 0.5em;
     background-color: lightyellow;
+    margin-bottom: 20px;
   }
 
   img {
