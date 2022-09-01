@@ -27,7 +27,7 @@ async function hentData() {
   vis(data);
 }
 
-function vis() {
+function vis(data) {
   const main = document.querySelector("main");
   const temp = document.querySelector("template").content;
   main.textContent = "";
