@@ -56,7 +56,7 @@ function visRet(retData) {
   popup.querySelector(".navn").textContent = retData.navn;
   popup.querySelector(".langBeskrivelse").textContent = retData.langbeskrivelse;
   popup.querySelector(".oprindelsesregion").textContent = retData.oprindelsesregion;
-  popup.querySelector(".billedeurl").src = "retter/" + retData.billedenavn + "-md.jpg";
+  popup.querySelector(".billedeurl").src = "retter/" + retData.billednavn + "-md.jpg";
   popup.querySelector(".pris").textContent = retData.pris + "kr.";
   popup.addEventListener("click", () => (popup.style.display = "none"));
 }
