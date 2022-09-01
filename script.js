@@ -53,13 +53,12 @@ function visRet(retData) {
   console.log(retData);
   const popup = document.querySelector("#popup");
   popup.style.display = "flex";
-  popup.querySelector("h2").textContent = retData.navn;
-  popup.querySelector("p").textContent = retData.langbeskrivelse;
-  popup.querySelector("p+p").textContent = retData.oprindelsesregion;
-  popup.querySelector("img").src = "faces/" + retData.billedenavn + "-md.jpg";
-  popup.querySelector("h3").textContent = retData.pris + "kr.";
+  popup.querySelector(".navn").textContent = retData.navn;
+  popup.querySelector(".langBeskrivelse").textContent = retData.langbeskrivelse;
+  popup.querySelector(".oprindelsesregion").textContent = retData.oprindelsesregion;
+  popup.querySelector(".billedeurl").src = "retter/" + retData.billedenavn + "-md.jpg";
+  popup.querySelector(".pris").textContent = retData.pris + "kr.";
   popup.addEventListener("click", () => (popup.style.display = "none"));
-  main.appendChild(popup);
 }
 
 hentData();
