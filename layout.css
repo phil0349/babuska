@@ -1,139 +1,278 @@
-h1 {
-  font-size: 6.5rem;
-  font-family: "bungee", cusrsive;
-  background-color: lightyellow;
-  color: rgb(6, 19, 45);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  border: 2px solid rgb(6, 19, 45);
-}
-h2 {
-  font-family: "loveya", cursive;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  color: lightyellow;
-}
-h3 {
-  font-family: "loveya", cursive;
-  font-size: 1.4rem;
-}
-p {
-  font-family: "londrina", cursive;
-  font-size: 2.4rem;
-  font-weight: bold;
-  margin: 0;
-  color: rgb(6, 19, 45);
-}
-.popuptekst {
-  font-family: "luckiest", cursive;
-  font-size: 1.4rem;
-}
-.kategori,
-.kortBeskrivelse,
-.langBeskrivelse,
-.oprindelsesregion {
-  font-family: "loveya", cursive;
-  font-size: 1rem;
-}
-.kategori {
-  color: coral;
-}
-div {
-  max-width: fit-content;
+@media (max-width: 850px) {
+  .splash {
+    margin-bottom: 20px;
+    width: fit-content;
+    background-size: cover;
+    border-radius: 0;
+    background-image: url(retter/babushka3-2.webp);
+    background-repeat: no-repeat;
+  }
+  h1 {
+    font-size: 1.8rem;
+    font-family: "bungee", cursive;
+    background-color: lightyellow;
+    color: rgb(6, 19, 45);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: 2px solid rgb(6, 19, 45);
+  }
+  h2,
+  h3 {
+    font-family: "loveya", cursive;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(6, 19, 45);
+    margin: 0;
+  }
+  p {
+    font-family: "londrina", cursive;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(6, 19, 45);
+  }
+  p.pris {
+    font-size: 2rem;
+  }
+  p.kortBeskrivelse,
+  p.langBeskrivelse {
+    font-family: "loveya", cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(6, 19, 45);
+  }
+  p.oprindelsesregion {
+    font-family: "loveya", cursive;
+    font-size: 2rem;
+    color: lightyellow;
+  }
+
+  body {
+    margin: 2rem;
+    margin-top: 0;
+    background-color: coral;
+  }
+
+  nav {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  button {
+    font-family: "loveya", cursive;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 30%;
+    border-width: 1px;
+    background-color: lightyellow;
+    border-color: rgb(6, 19, 45);
+    margin: 2px;
+  }
+
+  .valgt {
+    color: white;
+    background-color: rgb(6, 19, 45);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+    justify-content: center;
+  }
+  article {
+    padding: 1em;
+    border: 2px solid rgb(6, 19, 45);
+    border-radius: 0.5em;
+    background-color: lightyellow;
+  }
+
+  img {
+    max-width: 100%;
+    border: solid;
+    border-radius: 0.5em;
+    border-width: 2px;
+    border-color: rgb(6, 19, 45);
+  }
+
+  #popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
+
+  #popup article {
+    max-width: 60%;
+    background-color: #ff7f50;
+    padding: 12px;
+    color: rgb(52, 49, 47);
+    font-family: "loveya", cursive;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  #luk {
+    cursor: pointer;
+    border-radius: 20%;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(6, 19, 45);
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: 8%;
+    padding: 3px 9px;
+    transform: translate(0%, -50%);
+  }
 }
 
-.splash {
-  margin-bottom: 20px;
-  width: fit-content;
-  background-size: cover;
-  margin-top: -53px;
-  border-radius: 0;
-  background-image: url(retter/babushka3-2.webp);
-  background-repeat: no-repeat;
-}
+@media (min-width: 850px) {
+  h1 {
+    font-size: 6.5rem;
+    font-family: "bungee", cursive;
+    background-color: lightyellow;
+    color: rgb(6, 19, 45);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: 2px solid rgb(6, 19, 45);
+  }
+  h2 {
+    font-family: "loveya", cursive;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    color: lightyellow;
+  }
+  h3 {
+    font-family: "loveya", cursive;
+    font-size: 1.4rem;
+  }
+  p {
+    font-family: "londrina", cursive;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(6, 19, 45);
+  }
+  .popuptekst {
+    font-family: "luckiest", cursive;
+    font-size: 1.4rem;
+  }
+  .kategori,
+  .kortBeskrivelse,
+  .langBeskrivelse,
+  .oprindelsesregion {
+    font-family: "loveya", cursive;
+    font-size: 1rem;
+  }
+  .kategori {
+    color: coral;
+  }
+  div {
+    max-width: fit-content;
+  }
 
-body {
-  margin: 5rem;
-  margin-top: 0;
-  background-color: coral;
-}
+  .splash {
+    margin-bottom: 20px;
+    width: fit-content;
+    background-size: cover;
+    margin-top: -53px;
+    border-radius: 0;
+    background-image: url(retter/babushka3-2.webp);
+    background-repeat: no-repeat;
+  }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
+  body {
+    margin: 5rem;
+    margin-top: 0;
+    background-color: coral;
+  }
 
-button {
-  font-family: "loveya", cursive;
-  font-size: 1.8rem;
-  padding: 10px;
-  border-radius: 20%;
-  border-width: 2px;
-  background-color: lightyellow;
-  border-color: rgb(6, 19, 45);
-}
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
 
-.valgt {
-  color: white;
-  background-color: rgb(6, 19, 45);
-}
+  button {
+    font-family: "loveya", cursive;
+    font-size: 1.8rem;
+    padding: 10px;
+    border-radius: 20%;
+    border-width: 2px;
+    background-color: lightyellow;
+    border-color: rgb(6, 19, 45);
+  }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1em;
-  justify-content: center;
-}
-article {
-  padding: 2em;
-  border: 2px solid rgb(6, 19, 45);
-  border-radius: 0.5em;
-  background-color: lightyellow;
-}
+  .valgt {
+    color: white;
+    background-color: rgb(6, 19, 45);
+  }
 
-img {
-  max-width: 100%;
-  border: solid;
-  border-radius: 0.5em;
-  border-width: 2px;
-  border-color: rgb(6, 19, 45);
-}
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+    justify-content: center;
+  }
+  article {
+    padding: 2em;
+    border: 2px solid rgb(6, 19, 45);
+    border-radius: 0.5em;
+    background-color: lightyellow;
+  }
 
-#popup {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  display: none;
-}
+  img {
+    max-width: 100%;
+    border: solid;
+    border-radius: 0.5em;
+    border-width: 2px;
+    border-color: rgb(6, 19, 45);
+  }
 
-#popup article {
-  max-width: 60%;
-  background-color: #ff7f50;
-  padding: 12px;
-  color: rgb(52, 49, 47);
-  font-family: "loveya", cursive;
-  font-size: 1.4rem;
-  margin: 0;
-}
+  #popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
 
-#luk {
-  cursor: pointer;
-  border-radius: 20%;
-  border: solid;
-  border-width: 2px;
-  border-color: rgb(6, 19, 45);
-  color: white;
-  background-color: red;
-  position: absolute;
-  top: 8%;
-  padding: 3px 9px;
-  transform: translate(0%, -50%);
+  #popup article {
+    max-width: 60%;
+    background-color: #ff7f50;
+    padding: 12px;
+    color: rgb(52, 49, 47);
+    font-family: "loveya", cursive;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  #luk {
+    cursor: pointer;
+    border-radius: 20%;
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(6, 19, 45);
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: 8%;
+    padding: 3px 9px;
+    transform: translate(0%, -50%);
+  }
 }
