@@ -1,5 +1,5 @@
 h1 {
-  font-size: 7rem;
+  font-size: 6.5rem;
   font-family: "bungee", cusrsive;
   background-color: lightyellow;
   color: rgb(6, 19, 45);
@@ -50,7 +50,7 @@ div {
   background-size: cover;
   margin-top: -53px;
   border-radius: 0;
-  background-image: url(/retter/babushka3-2.webp);
+  background-image: url(retter/babushka3-2.webp);
   background-repeat: no-repeat;
 }
 
