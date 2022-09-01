@@ -55,6 +55,7 @@ function visRet(retData) {
   popup.style.display = "flex";
   popup.querySelector(".navn").textContent = retData.navn;
   popup.querySelector(".langBeskrivelse").textContent = retData.langbeskrivelse;
+  popup.querySelector(".kortBeskrivelse").textContent = retData.kortbeskrivelse;
   popup.querySelector(".oprindelsesregion").textContent = retData.oprindelsesregion;
   popup.querySelector(".billedeurl").src = "retter/" + retData.billednavn + "-md.jpg";
   popup.querySelector(".pris").textContent = retData.pris + "kr.";
